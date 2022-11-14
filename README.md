@@ -13,6 +13,17 @@ when building embedded Linux distribution.
 - [cc-ublox](recipes-support/cc-ublox) - Recipe(s) for the [cc.ublox.generated](https://github.com/commschamp/cc.ublox.generated).
 - [cc-x509](recipes-support/cc-x509) - Recipe(s) for the [cc.x509.generated](https://github.com/commschamp/cc.x509.generated).
 
+# Supported Yocto Versions
+This meta layer is expected to work without any problem in all yocto versions as long as the target compiler supports
+C++11. The [cc-commsdsl](recipes-applications/cc-commsdsl) code generators require host compiler with C++17 support though.
+
+This meta layer does **NOT** follow the yocto's convention to use the branches named after
+[yocto releases]([cc-commsdsl](recipes-applications/cc-commsdsl)). Just use the latest release on the master branch.
+
+Note that the names of the supported yocto releases are listed in the **LAYERSERIES_COMPAT_commschamp** variable inside
+the [conf/layer.conf](conf/layer.conf). In case newer version of yocto is being used, just update the variable accordingly
+and then submit a pull-request with the update.
+
 # Some Tips
 When generating and using SDK for the external target application development add the following lines to the image recipe:
 ```
@@ -25,7 +36,7 @@ TOOLCHAIN_TARGET_TASK += "cc-ublox-dev"
 TOOLCHAIN_HOST_TASK += "nativesdk-cc-commsdsl"
 ```
 
-In case some other project requires code generators from the CommsChampion Ecosystem add "cc-commsdsl-native" to the dependencies
+In case some other project requires code generators from the CommsChampion Ecosystem add **cc-commsdsl-native** to the dependencies
 ```
 DEPENDS = "cc-commsdsl-native cc-comms"
 ```
