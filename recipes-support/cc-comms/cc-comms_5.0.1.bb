@@ -1,1 +1,2 @@
+SRCREV = "819329f9797a266a3696b59070d768ea48876cb3"
 require cc-comms.inc

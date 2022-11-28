@@ -2,7 +2,7 @@ DESCRIPTION = "UBX protocol definition, used by u-blox GPS receivers."
 LICENSE = "MPL-2.0"
 
 SRC_URI = "\
-    git://github.com/commschamp/cc.ublox.generated.git;protocol=https;branch=master;tag=v${PV} \
+    git://github.com/commschamp/cc.ublox.generated.git;protocol=https;branch=master \
     file://LICENSE \
 "
 

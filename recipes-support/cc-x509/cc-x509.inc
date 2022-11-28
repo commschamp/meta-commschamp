@@ -2,7 +2,7 @@ DESCRIPTION = "X.509 public key infrastructure implemented using COMMS library f
 LICENSE = "MPL-2.0"
 
 SRC_URI = "\
-    git://github.com/commschamp/cc.mqtt311.generated.git;protocol=https;branch=master;tag=v${PV} \
+    git://github.com/commschamp/cc.x509.generated.git;protocol=https;branch=master \
     file://LICENSE \
 "
 
