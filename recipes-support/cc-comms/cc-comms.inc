@@ -10,8 +10,8 @@ PR = "r1"
 
 inherit cmake
 
-ALLOW_EMPTY_${PN} = "1"
-FILES_${PN}-dev += "${libdir}/*"
+ALLOW_EMPTY:${PN} = "1"
+FILES:${PN}-dev += "${libdir}/*"
 
 
 

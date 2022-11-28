@@ -16,8 +16,8 @@ DEPENDS = "cc-comms"
 
 inherit cmake
 
-ALLOW_EMPTY_${PN} = "1"
-FILES_${PN}-dev += "${libdir}/*"
+ALLOW_EMPTY:${PN} = "1"
+FILES:${PN}-dev += "${libdir}/*"
 
 do_patch () {
     cp ${WORKDIR}/LICENSE ${S}
