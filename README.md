@@ -14,11 +14,14 @@ when building embedded Linux distribution.
 - [cc-x509](recipes-support/cc-x509) - Recipe(s) for the [cc.x509.generated](https://github.com/commschamp/cc.x509.generated).
 
 # Supported Yocto Versions
-This meta layer is expected to work without any problem in all yocto versions as long as the target compiler supports
-C++11. The [cc-commsdsl](recipes-applications/cc-commsdsl) code generators require host compiler with C++17 support though.
+This meta layer follows the convention of branch names after the [yocto releases](https://wiki.yoctoproject.org/wiki/Releases).
+In most cases the branch names will follow the same hashes until the backward compatibility of the recipe syntax is broken,
+like it happened with the **honister** release.
 
-This meta layer does **NOT** follow the yocto's convention to use the branches named after
-[yocto releases]([cc-commsdsl](recipes-applications/cc-commsdsl)). Just use the latest release on the master branch.
+The **master** branch will follow the latest yocto release, and the [release tags](https://github.com/commschamp/meta-commschamp/releases)
+will be assigned to the commits on the **master** branch.
+They will serve as an announcement that all the branches have been updated and their latest updates
+could be pulled in.
 
 Note that the names of the supported yocto releases are listed in the **LAYERSERIES_COMPAT_commschamp** variable inside
 the [conf/layer.conf](conf/layer.conf). In case newer version of yocto is being used, just update the variable accordingly

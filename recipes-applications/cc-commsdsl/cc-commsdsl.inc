@@ -4,7 +4,7 @@ LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=b1e01b26bacfc2232046c90a330332b3"
 
 DEPENDS = "libxml2"
 
-SRC_URI = "git://github.com/commschamp/commsdsl.git;protocol=https;branch=master;tag=v${PV}"
+SRC_URI = "git://github.com/commschamp/commsdsl.git;protocol=https;branch=master"
 
 S = "${WORKDIR}/git"
 

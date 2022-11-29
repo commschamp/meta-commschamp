@@ -2,7 +2,7 @@ DESCRIPTION = "MQTT v5 protocol definition."
 LICENSE = "MPL-2.0"
 
 SRC_URI = "\
-    git://github.com/commschamp/cc.mqtt5.generated.git;protocol=https;branch=master;tag=v${PV} \
+    git://github.com/commschamp/cc.mqtt5.generated.git;protocol=https;branch=master \
     file://LICENSE \
 "
 
@@ -16,8 +16,8 @@ DEPENDS = "cc-comms"
 
 inherit cmake
 
-ALLOW_EMPTY_${PN} = "1"
-FILES_${PN}-dev += "${libdir}/*"
+ALLOW_EMPTY:${PN} = "1"
+FILES:${PN}-dev += "${libdir}/*"
 
 do_patch () {
     cp ${WORKDIR}/LICENSE ${S}
