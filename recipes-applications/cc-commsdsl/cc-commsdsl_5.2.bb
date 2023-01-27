@@ -1,0 +1,6 @@
+SRCREV = "95ef04143a00bd56780d24e6aaf5de10087d871e"
+require cc-commsdsl.inc
+
+EXTRA_OECMAKE += "\
+    -DCOMMSDSL_BUILD_COMMSDSL2EMSCRIPTEN=ON \
+"
