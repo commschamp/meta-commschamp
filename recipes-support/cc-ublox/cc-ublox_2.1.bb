@@ -1,2 +1,2 @@
-SRCREV = "8e650de18700e6b1e96f6e18624ace8d8195c7b5"
+SRCREV = "4c723b5bb6caf86ee60f510a8fd9e69435c2c489"
 require cc-ublox.inc
