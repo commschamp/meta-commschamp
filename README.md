@@ -10,6 +10,7 @@ when building embedded Linux distribution.
 - [cc-mqtt311](recipes-support/cc-mqtt311) - Recipe(s) for the [cc.mqtt311.generated](https://github.com/commschamp/cc.mqtt311.generated).
 - [cc-mqtt5](recipes-support/cc-mqtt5) - Recipe(s) for the [cc.mqtt5.generated](https://github.com/commschamp/cc.mqtt5.generated).
 - [cc-mqttsn](recipes-support/cc-mqttsn) - Recipe(s) for the [cc.mqttsn.generated](https://github.com/commschamp/cc.mqttsn.generated).
+- [cc-mqttsn-libs](recipes-support/cc-mqttsn-libs) - Recipe(s) for the [cc.mqttsn.libs](https://github.com/commschamp/cc.mqttsn.libs).
 - [cc-ublox](recipes-support/cc-ublox) - Recipe(s) for the [cc.ublox.generated](https://github.com/commschamp/cc.ublox.generated).
 - [cc-x509](recipes-support/cc-x509) - Recipe(s) for the [cc.x509.generated](https://github.com/commschamp/cc.x509.generated).
 
@@ -27,7 +28,24 @@ Note that the names of the supported yocto releases are listed in the **LAYERSER
 the [conf/layer.conf](conf/layer.conf). In case newer version of yocto is being used, just update the variable accordingly
 and then submit a pull-request with the update.
 
-# Some Tips
+# PACKAGECONFIG of cc-commsdsl
+By default the `cc-commsdsl` recipe produces single **commsdsl2comms** code generator. However, the recipe defines multiple
+**PACKAGECONFIG** features named after the possible code generator binary name. To enable the relevant code generator use
+**PACKAGECONFIG:pn-cc-commsdsl** variable assignment in the `local.conf` or machine configuration file.
+```
+PACKAGECONFIG:pn-cc-commsdsl = "commsdsl2swig commsdsl2emscripten"
+```
+
+# PACKAGECONFIG of cc-mqttsn-libs
+By default the `cc-mqttsn-libs` recipe produces static libraries for both client and gateway. However, the recipe also allows
+adding Qt5 based applications for UDP I/O link. To enable them use appropriate **PACKAGECONFIG** assignment in the
+`local.conf` or machine configuration file.
+```
+PACKAGECONFIG:append:pn-cc-mqttsn-libs = " cc_mqttsn_client_udp_apps cc_mqttsn_gateway_udp_apps"
+```
+Note that it will bring up `qt5base` package as the dependency.
+
+# Extra Tips
 When generating and using SDK for the external target application development add the following lines to the image recipe:
 ```
 # Add the required headers only libraries from the CommsChampion Ecosystem
