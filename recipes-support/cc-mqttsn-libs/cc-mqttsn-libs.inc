@@ -25,4 +25,4 @@ EXTRA_OECMAKE += "\
     -DCC_MQTTSN_WARN_AS_ERR=OFF \
 "
 
-
+FILES:${PN}-dev += "${libdir}/cc_mqttsn_client/* ${libdir}/cc_mqttsn_gateway/*"
