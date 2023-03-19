@@ -10,6 +10,7 @@ when building embedded Linux distribution.
 - [cc-mqtt311](recipes-support/cc-mqtt311) - Recipe(s) for the [cc.mqtt311.generated](https://github.com/commschamp/cc.mqtt311.generated).
 - [cc-mqtt5](recipes-support/cc-mqtt5) - Recipe(s) for the [cc.mqtt5.generated](https://github.com/commschamp/cc.mqtt5.generated).
 - [cc-mqttsn](recipes-support/cc-mqttsn) - Recipe(s) for the [cc.mqttsn.generated](https://github.com/commschamp/cc.mqttsn.generated).
+- [cc-mqttsn-libs](recipes-support/cc-mqttsn-libs) - Recipe(s) for the [cc.mqttsn.libs](https://github.com/commschamp/cc.mqttsn.libs).
 - [cc-ublox](recipes-support/cc-ublox) - Recipe(s) for the [cc.ublox.generated](https://github.com/commschamp/cc.ublox.generated).
 - [cc-x509](recipes-support/cc-x509) - Recipe(s) for the [cc.x509.generated](https://github.com/commschamp/cc.x509.generated).
 
