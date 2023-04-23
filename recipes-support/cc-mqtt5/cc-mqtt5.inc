@@ -3,7 +3,6 @@ LICENSE = "MPL-2.0"
 
 SRC_URI = "\
     git://github.com/commschamp/cc.mqtt5.generated.git;protocol=https;branch=master \
-    file://LICENSE \
 "
 
 LIC_FILES_CHKSUM = "file://LICENSE;md5=815ca599c9df247a0c7f619bab123dad"
@@ -18,10 +17,4 @@ inherit cmake
 
 ALLOW_EMPTY:${PN} = "1"
 FILES:${PN}-dev += "${libdir}/*"
-
-do_patch () {
-    cp ${WORKDIR}/LICENSE ${S}
-}
-
-
 
