@@ -8,6 +8,7 @@ when building embedded Linux distribution.
 - [cc-comms](recipes-support/cc-comms) - Recipe(s) for the [COMMS Library](https://github.com/commschamp/comms).
 - [cc-commsdsl](recipes-applications/cc-commsdsl) - Recipe(s) for the [commsdsl](https://github.com/commschamp/commscommsdsl) code generators.
 - [cc-mqtt311](recipes-support/cc-mqtt311) - Recipe(s) for the [cc.mqtt311.generated](https://github.com/commschamp/cc.mqtt311.generated).
+- [cc-mqtt5-libs](recipes-support/cc-mqtt5-libs) - Recipe(s) for the [cc.mqtt5.libs](https://github.com/commschamp/cc.mqtt5.libs).
 - [cc-mqtt5](recipes-support/cc-mqtt5) - Recipe(s) for the [cc.mqtt5.generated](https://github.com/commschamp/cc.mqtt5.generated).
 - [cc-mqttsn](recipes-support/cc-mqttsn) - Recipe(s) for the [cc.mqttsn.generated](https://github.com/commschamp/cc.mqttsn.generated).
 - [cc-mqttsn-libs](recipes-support/cc-mqttsn-libs) - Recipe(s) for the [cc.mqttsn.libs](https://github.com/commschamp/cc.mqttsn.libs).
