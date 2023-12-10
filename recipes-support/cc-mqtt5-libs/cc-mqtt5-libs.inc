@@ -1,6 +1,6 @@
 DESCRIPTION = "MQTT5 client library/applications."
 LICENSE = "MPL-2.0"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=815ca599c9df247a0c7f619bab123dad"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=9741c346eef56131163e13b9db1241b3"
 
 SRC_URI = "git://github.com/commschamp/cc.mqtt5.libs.git;protocol=https;branch=master"
 
@@ -27,4 +27,4 @@ EXTRA_OECMAKE += "\
     -DCC_MQTT5_WARN_AS_ERR=OFF \
 "
 
-FILES:${PN}-dev += "${libdir}/cc_mqttsn_client/* ${libdir}/cc_mqttsn_gateway/*"
+FILES:${PN}-dev += "${libdir}/cc_mqtt5_client/*"
