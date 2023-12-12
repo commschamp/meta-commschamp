@@ -8,6 +8,7 @@ when building embedded Linux distribution.
 - [cc-comms](recipes-support/cc-comms) - Recipe(s) for the [COMMS Library](https://github.com/commschamp/comms).
 - [cc-commsdsl](recipes-applications/cc-commsdsl) - Recipe(s) for the [commsdsl](https://github.com/commschamp/commscommsdsl) code generators.
 - [cc-mqtt311](recipes-support/cc-mqtt311) - Recipe(s) for the [cc.mqtt311.generated](https://github.com/commschamp/cc.mqtt311.generated).
+- [cc-mqtt5-libs](recipes-support/cc-mqtt5-libs) - Recipe(s) for the [cc.mqtt5.libs](https://github.com/commschamp/cc.mqtt5.libs).
 - [cc-mqtt5](recipes-support/cc-mqtt5) - Recipe(s) for the [cc.mqtt5.generated](https://github.com/commschamp/cc.mqtt5.generated).
 - [cc-mqttsn](recipes-support/cc-mqttsn) - Recipe(s) for the [cc.mqttsn.generated](https://github.com/commschamp/cc.mqttsn.generated).
 - [cc-mqttsn-libs](recipes-support/cc-mqttsn-libs) - Recipe(s) for the [cc.mqttsn.libs](https://github.com/commschamp/cc.mqttsn.libs).
@@ -37,13 +38,22 @@ PACKAGECONFIG:pn-cc-commsdsl = "commsdsl2swig commsdsl2emscripten"
 ```
 
 # PACKAGECONFIG of cc-mqttsn-libs
-By default the `cc-mqttsn-libs` recipe produces static libraries for both client and gateway. However, the recipe also allows
+By default the `cc-mqttsn-libs` recipe produces static libraries for both client and gateway. The recipe also allows
 adding Qt5 based applications for UDP I/O link. To enable them use appropriate **PACKAGECONFIG** assignment in the
 `local.conf` or machine configuration file.
 ```
 PACKAGECONFIG:append:pn-cc-mqttsn-libs = " cc_mqttsn_client_udp_apps cc_mqttsn_gateway_udp_apps"
 ```
-Note that it will bring up `qt5base` package as the dependency.
+Note that it will bring up `qt5base` package as a dependency.
+
+# PACKAGECONFIG of cc-mqtt5-libs
+By default the `cc-mqtt5-libs` recipe produces static mqtt5 client library as well as application tools. The recipe also allows
+adding / removing features using **PACKAGECONFIG** assignment in the
+`local.conf` or machine configuration file.
+```
+PACKAGECONFIG:append:pn-cc-mqtt5-libs = " cc_mqtt5_client_lib"
+```
+Note that application tools it will bring up `boost` package as a dependency.
 
 # Extra Tips
 When generating and using SDK for the external target application development add the following lines to the image recipe:
