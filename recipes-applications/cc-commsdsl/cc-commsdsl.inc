@@ -1,4 +1,4 @@
-DESCRIPTION = "Code generator"
+DESCRIPTION = "CommsChampion Ecosystem code generators"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=b1e01b26bacfc2232046c90a330332b3"
 
