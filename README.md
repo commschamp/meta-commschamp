@@ -20,7 +20,7 @@ This meta layer follows the convention of branch names after the [yocto releases
 In most cases the branch names will follow the same hashes until the backward compatibility of the recipe syntax is broken,
 like it happened with the **honister** release.
 
-The **master** branch will follow the latest yocto release, and the [release tags](https://github.com/commschamp/meta-commschamp/releases)
+The **master** branch will follow the latest yocto **LTS** release, and the [release tags](https://github.com/commschamp/meta-commschamp/releases)
 will be assigned to the commits on the **master** branch.
 They will serve as an announcement that all the branches have been updated and their latest updates
 could be pulled in.
@@ -28,6 +28,9 @@ could be pulled in.
 Note that the names of the supported yocto releases are listed in the **LAYERSERIES_COMPAT_commschamp** variable inside
 the [conf/layer.conf](conf/layer.conf). In case newer version of yocto is being used, just update the variable accordingly
 and then submit a pull-request with the update.
+
+In case some yocto release is EOL, then its relevant branch in this repository may also stop receiving
+updates of the latest [CommsChampion Ecosystem](https://commschamp.github.io/) projects releases.
 
 # PACKAGECONFIG of cc-commsdsl
 By default the `cc-commsdsl` recipe produces single **commsdsl2comms** code generator. However, the recipe defines multiple
