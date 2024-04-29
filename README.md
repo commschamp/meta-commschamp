@@ -49,14 +49,23 @@ PACKAGECONFIG:append:pn-cc-mqttsn-libs = " cc_mqttsn_client_udp_apps cc_mqttsn_g
 ```
 Note that it will bring up `qt5base` package as a dependency.
 
-# PACKAGECONFIG of cc-mqtt5-libs
-By default the `cc-mqtt5-libs` recipe produces static mqtt5 client library as well as application tools. The recipe also allows
-adding / removing features using **PACKAGECONFIG** assignment in the
+# PACKAGECONFIG of cc-mqtt311-libs
+By default the `cc-mqtt311-libs` recipe produces static mqtt v3.1.1 client library. The recipe also allows
+adding example applications. To enable them use appropriate **PACKAGECONFIG** assignment in the
 `local.conf` or machine configuration file.
 ```
-PACKAGECONFIG:append:pn-cc-mqtt5-libs = " cc_mqtt5_client_lib"
+PACKAGECONFIG:append:pn-cc-mqtt311-libs = " cc_mqtt311_client_lib  cc_mqtt311_client_apps"
 ```
-Note that application tools it will bring up `boost` package as a dependency.
+Note that applications will bring up `boost` package as a dependency.
+
+# PACKAGECONFIG of cc-mqtt5-libs
+By default the `cc-mqtt5-libs` recipe produces static mqtt v5 client library. The recipe also allows
+adding example applications. To enable them use appropriate **PACKAGECONFIG** assignment in the
+`local.conf` or machine configuration file.
+```
+PACKAGECONFIG:append:pn-cc-mqtt5-libs = " cc_mqtt5_client_lib  cc_mqtt5_client_apps"
+```
+Note that applications will bring up `boost` package as a dependency.
 
 # Extra Tips
 When generating and using SDK for the external target application development add the following lines to the image recipe:
