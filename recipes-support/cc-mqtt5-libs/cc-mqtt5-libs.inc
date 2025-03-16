@@ -15,12 +15,17 @@ DEPENDS = "\
     cc-mqtt5 \
 "
 
-PACKAGECONFIG ??= "cc_mqtt5_client_lib"
+PACKAGECONFIG ??= "cc_mqtt5_client_lib cc_mqtt5_client_apps cc_mqtt5_client_apps_with_tls"
 PACKAGECONFIG[cc_mqtt5_client_lib] = "-DCC_MQTT5_CLIENT_DEFAULT_LIB=ON, -DCC_MQTT5_CLIENT_DEFAULT_LIB=OFF"
 PACKAGECONFIG[cc_mqtt5_client_apps] = "\
     -DCC_MQTT5_CLIENT_DEFAULT_LIB=ON -DCC_MQTT5_CLIENT_APPS=ON, \
     -DCC_MQTT5_CLIENT_APPS=OFF, \
     boost \
+"
+PACKAGECONFIG[cc_mqtt5_client_apps_with_tls] = "\
+    -DCC_MQTT5_CLIENT_APPS_WITH_OPENSSL=ON, \
+    -DCC_MQTT5_CLIENT_APPS_WITH_OPENSSL=OFF, \
+    openssl \
 "
 
 EXTRA_OECMAKE += "\
