@@ -1,2 +1,0 @@
-SRCREV = "60dd4ee80f207f3d2126b1189475762430e62bc7"
-require cc-mqtt311.inc
