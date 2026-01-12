@@ -10,7 +10,7 @@ S = "${WORKDIR}/git"
 
 PR = "r1"
 
-inherit cmake 
+inherit cmake
 
 BBCLASSEXTEND = "native nativesdk"
 
@@ -24,5 +24,4 @@ PACKAGECONFIG[commsdsl2c] = "-DCOMMSDSL_BUILD_COMMSDSL2C=ON, -DCOMMSDSL_BUILD_CO
 EXTRA_OECMAKE += "\
     -DCOMMSDSL_WARN_AS_ERR=OFF \
 "
-
 

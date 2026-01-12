@@ -18,5 +18,3 @@ inherit cmake
 ALLOW_EMPTY:${PN} = "1"
 FILES:${PN}-dev += "${libdir}/*"
 
-
-

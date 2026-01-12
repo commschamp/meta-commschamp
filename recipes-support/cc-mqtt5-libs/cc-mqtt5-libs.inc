@@ -8,7 +8,7 @@ S = "${WORKDIR}/git"
 
 PR = "r1"
 
-inherit cmake 
+inherit cmake
 
 DEPENDS = "\
     cc-comms \
