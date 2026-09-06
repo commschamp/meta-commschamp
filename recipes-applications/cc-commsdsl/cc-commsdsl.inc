@@ -6,8 +6,6 @@ DEPENDS = "libxml2"
 
 SRC_URI = "git://github.com/commschamp/commsdsl.git;protocol=https;branch=master"
 
-S = "${WORKDIR}/git"
-
 PR = "r1"
 
 inherit cmake

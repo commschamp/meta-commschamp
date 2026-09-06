@@ -4,8 +4,6 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=815ca599c9df247a0c7f619bab123dad"
 
 SRC_URI = "git://github.com/commschamp/cc.mqttsn.libs.git;protocol=https;branch=master"
 
-S = "${WORKDIR}/git"
-
 PR = "r1"
 
 inherit cmake

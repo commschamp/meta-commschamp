@@ -7,8 +7,6 @@ SRC_URI = "\
 
 LIC_FILES_CHKSUM = "file://LICENSE;md5=815ca599c9df247a0c7f619bab123dad"
 
-S = "${WORKDIR}/git"
-
 PR = "r1"
 
 DEPENDS = "cc-comms"
